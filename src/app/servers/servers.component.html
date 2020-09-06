@@ -1,31 +1,42 @@
-<hr>
-<p style="font-weight: 700;">servers second component</p>
-<button class="btn btn-primary btn-sm" [disabled]="!allowNewServer">Add Server</button>
-<hr>
-<p style="font-weight: 700;"> event binding example</p>
-<hr>
-<button class="btn btn-md" (click)="EventOutputFn()" >event binding</button>
-<p style="font-weight: 400;"> {{EventOutput}}</p>
-<hr>
-<p style="font-weight: 700;"> passing and using data with event binding example</p>
-<hr>
-<input type="text" name="" id="" (input)="inputval($event)">
-<p style="font-weight: 400;">{{Inputvalue}} </p>
-<hr>
-<p style="font-weight: 700;"> Two way binding example</p>
-<span>what it does is if i change the value of lower input value, it will the change the value here and back in component. I can have this value as default coming from component, as in this case its value2. But if I chanmge value 2 it will change in component as well</span>
-<hr>
-<input type="text" name="" id="" (input)="inputval2($event)">
-<br>
-<input type="text" name="" id="" [(ngModel)]="Inputvalue2">
-<p style="font-weight: 400;">{{Inputvalue2}} </p>
-<hr>
-<p style="font-weight: 700;"> Data Binding</p>
-<br>
-<input type="text" name="" id="" [(ngModel)]="serverNameIs">
+<hr />
+
+<p style="font-weight: 700;color:green;">This is example of property binding. you can alos bind to directives and your components</p>
+<button class="btn btn-primary btn-sm" [disabled]="!allowNewServer">
+  Add Server
+</button>
+<hr />
+
+<p style="font-weight: 700">event binding example</p>
+<hr />
+<button class="btn btn-md" (click)="EventOutputFn()">event binding</button>
+<p style="font-weight: 400">{{ EventOutput }}</p>
+<hr />
+<p style="font-weight: 700">
+  passing and using data with event binding example
+</p>
+<hr />
+<input type="text" name="" id="" (input)="inputval($event)" />
+<p style="font-weight: 400">{{ Inputvalue }}</p>
+<hr />
+<p style="font-weight: 700">Two way binding example</p>
+<span>what it does is if i change the value of lower input value, it will the
+  change the value here and back in component. I can have this value as default
+  coming from component, as in this case its value2. But if I chanmge value 2 it
+  will change in component as well</span>
+<hr />
+<input type="text" name="" id="" (input)="inputval2($event)" />
+<br />
+<input type="text" name="" id="" [(ngModel)]="Inputvalue2" />
+<p style="font-weight: 400">{{ Inputvalue2 }}</p>
+<hr />
+<p style="font-weight: 700">Data Binding</p>
+<br />
+<input type="text" name="" id="" [(ngModel)]="serverNameIs" />
 <button type="button" (click)="dataBindExample()">Data bind ex</button>
-<p style="font-weight: 400;" *ngIf="showServerName">Server was created and name is {{serverNameIs}} </p>
-<hr>
-<hr>
+<p style="font-weight: 400" *ngIf="showServerName">
+  Server was created and name is {{ serverNameIs }}
+</p>
+<hr />
+<hr />
 <app-server></app-server>
 <app-server></app-server>
