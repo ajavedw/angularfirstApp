@@ -12,10 +12,15 @@ export class ServersComponent implements OnInit {
   Inputvalue2 = 'value2';
   serverNameIs = 'serverName';
   showServerName = false;
+  serverNaming = false;
+  newBtnDisabled = true;
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
+    setTimeout(() => {
+      this.newBtnDisabled = false;
+    }, 4000);
   }
 
   EventOutputFn() {
@@ -33,5 +38,16 @@ export class ServersComponent implements OnInit {
     this.showServerName = true;
   }
 
+  newBtnClicked(){
+    this.serverNaming = true;
+  }
+
   ngOnInit(): void {}
 }
+
+/* Two typos of directives
+
+1.  Structural e.g ngIF ngFor ngSwitch
+2.  Component  (click)
+3.  Attribute e.g ngStyle
+*/

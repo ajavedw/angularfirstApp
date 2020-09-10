@@ -38,5 +38,11 @@
 </p>
 <hr />
 <hr />
+
+<p>/************** REPEAT DIRECTIVES**************/</p>
+<button class="btn btn-sm" [disabled]="newBtnDisabled" (click) = "newBtnClicked();">directive ngIf learn</button>
+
+<p *ngIf="serverNaming; else noServer">A brand new machine was created</p>
+<ng-template #noServer ><p>No server was created</p></ng-template>
 <app-server></app-server>
 <app-server></app-server>
